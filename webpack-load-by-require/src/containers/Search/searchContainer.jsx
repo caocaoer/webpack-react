@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import LoadContainer from '../Load/LoadContainer';
 
 export default class Search extends Component {
 
@@ -10,6 +11,7 @@ export default class Search extends Component {
         return (
             <div className="search">
                 search......................
+                <LoadContainer/>
             </div>
         );
     }
