@@ -4,12 +4,9 @@ import precss from 'precss';
 import autoprefixer from 'autoprefixer';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
-// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import es3ifyPlugin from 'es3ify-webpack-plugin';
 const STATIC_PATH = 'static';
-// const extractVendor = new ExtractTextPlugin(`${STATIC_PATH}/css/[contenthash].vendor.css`);
-// const extractStyle = new ExtractTextPlugin(`${STATIC_PATH}/css/[contenthash].style.css`);
 
 export default {
     entry: {
@@ -54,22 +51,10 @@ export default {
             from: 'plugins',
             to: `${STATIC_PATH}/plugins`
         }]),        
-        // extractVendor,
-        // extractStyle,
         new CleanWebpackPlugin(['build']),                  // 清除编译目录
-        // new webpack.optimize.CommonsChunkPlugin('vendor'),  // 提取公共模块
         new HtmlWebpackPlugin({                             // 主页面入口index.html
             filename: 'index.html',
             template: './src/index.html'
         })
-        // ,
-        // new webpack.LoaderOptionsPlugin({
-        //     minimize: true,                                 // 压缩loader读取的文件
-        //     options: {
-        //         postcss: function () {
-        //             return [precss, autoprefixer];
-        //         }
-        //     }
-        // })
     ]
 };
