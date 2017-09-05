@@ -150,3 +150,6 @@ npm install -g webpack@2.3.2 webpack-dev-server@2.3.0 eslint@3.17.1 babel-core@6
     运行 /bin/release-test.bat
 4. 同时发布到 dev 和 test 服务器:
     运行 /bin/release-both.bat
+
+### 注意
+1. "react-router"版本不能高于"^2.3.0"
