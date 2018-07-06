@@ -1,9 +1,9 @@
-const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebPackPlugin from 'html-webpack-plugin';
 
 const STATIC_PATH = 'static';
 
-module.exports = {
+export default {
     mode: 'development',
     entry: './src/index.jsx',
     output: {
